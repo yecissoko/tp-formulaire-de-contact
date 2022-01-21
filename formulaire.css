@@ -1,0 +1,137 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --green: #5dcb94;
+    --grey: #dcd4d4;
+}
+
+html {
+    font-family: Arial, Helvetica, sans-serif;   
+}
+
+body {
+    background-color: #f9f9f9;
+}
+
+h1 {
+    text-align: center;
+}
+
+h2, p {
+    margin: 1.2rem 0;
+}
+
+ul {
+    list-style-type: none;
+}
+
+.contact {
+    width: 60%;
+    min-width: 850px;
+    margin: 30px auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.contact-information {
+    background-color: var(--green);
+    flex: 1 40%;
+    color: white;
+    padding: 2.7rem;
+}
+
+.contact-address li {
+    margin: 1.5rem 0;
+}
+
+.contact-address span {
+    border: 1px solid white;
+    border-radius: 50%;
+    padding: 10px;
+    display: inline-block;
+    margin-right: 10px;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+}
+
+.contact-address address {
+    display: inline-block;
+    width: 70%;
+    vertical-align: top;
+}
+
+.contact-form {
+    background-color: white;
+    flex: 3 60%;
+    padding: 2.7rem;
+}
+
+.contact-form form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.form-group {
+    margin: 10px 0;
+}
+
+.form-group:nth-child(1), 
+.form-group:nth-child(2) {
+    flex-basis: 48%;
+}
+
+.form-group:nth-child(2) {
+    flex-grow: 0.7;
+}
+
+.form-group:nth-child(3), 
+.form-group:nth-child(4) {
+    flex-basis: 100%;
+}
+
+input[type], textarea {
+    width: 100%;
+    padding: 8px;
+    border: none;
+    border-bottom: 1px solid var(--grey);
+    outline:none;
+}
+
+input[type=submit] {
+    padding: 1rem;
+    background-color: var(--green);
+    color: white;
+    border:none;
+    outline: none;
+    border-radius: 5px;
+}
+
+.contact-form label {
+    display: block;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+}
+
+@media screen and (max-width: 850px) {
+    .contact {
+        width: 100%;
+        flex-direction: column;
+        min-width: unset;
+        margin: 30px auto;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .contact-form {
+        order: -1;;
+        width: 100%;
+    }
+}
